@@ -1,0 +1,176 @@
+@import "https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css";
+
+body {
+  --bg-light: #e2e5e8;
+  --text-light: #2B2D42;
+  --primary-light: #5850d5;
+  --secondary-light: #8D99AE;
+  --accent-light: #d2d7d9;
+  --bg-dark: #4d5064;
+  --text-dark: #cbd3d5;
+  --primary-dark: #5850d4;
+  --secondary-dark: #8D99AE;
+  --accent-dark: #F0F4F8;
+}
+
+body.light {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+}
+
+body.light .bg-primary {
+  background-color: var(--primary-light);
+}
+
+.post-title {
+  font-weight: bold;
+}
+
+body.light .bg-secondary {
+  background-color: var(--secondary-light);
+}
+
+body.light .bg-accent {
+  background-color: var(--accent-light);
+}
+
+body.dark {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+body.dark .bg-primary {
+  background-color: var(--primary-dark);
+}
+
+body.dark .bg-secondary {
+  background-color: var(--secondary-dark);
+}
+
+body.dark .bg-accent {
+  background-color: var(--accent-dark);
+}
+
+.mood-button {
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-light);
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+.mood-icons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+
+.mood-icon {
+  width: 24px;
+  height: 24px;
+}
+.mood-button:hover {
+  background-color: var(--primary-dark);
+}
+
+.post-box {
+  border: 1px solid var(--secondary-light);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: var(--accent-light);
+  color: var(--text-light);
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.post-box:hover {
+  background-color: var(--accent-dark);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"] {
+  background-color: var(--accent-light);
+  color: var(--text-light);
+  border: 1px solid var(--secondary-light);
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+input[type="text"]::placeholder {
+  color: var(--text-light);
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  background-color: var(--primary-light);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+}
+
+.mood-icons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+
+.mood-icon {
+  width: 24px;
+  height: 24px;
+}
+.loading-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #3498db;
+  z-index: 9999;
+  animation: loading 2s linear infinite;
+}
+
+@keyframes loading {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
+
+body.loaded .loading-bar {
+  display: none;
+}
+.loading-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #3498db;
+  z-index: 9999;
+  animation: loading 2s linear infinite;
+}
+
+@keyframes loading {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
+
+body.loaded .loading-bar {
+  display: none;
+}
