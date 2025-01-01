@@ -49,6 +49,7 @@ document.getElementById('music-toggle').addEventListener('change', (event) => {
 document.addEventListener('DOMContentLoaded', () => {
   playMusic(0); // Play happy music by default
 });
+
 document.getElementById('dark-mode-toggle').addEventListener('click', () => {
   document.body.classList.toggle('dark');
   document.body.classList.toggle('light');
@@ -62,7 +63,6 @@ document.getElementById('dark-mode-toggle').addEventListener('click', () => {
     icon.classList.add('fa-moon');
   }
 
-  // Update the Markdown viewer if it's open
   if (window.markdownViewer) {
     window.markdownViewer.document.body.classList.toggle('dark');
     window.markdownViewer.document.body.classList.toggle('light');
